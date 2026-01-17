@@ -6,154 +6,213 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>TECHVERSE LFA BUILDER - Stakeholder Mapping</title>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
     rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <style type="text/tailwindcss">
-    :root {
-            --primary-blue: #2563eb;
-            --primary-hover: #1d4ed8;
-            --surface-bg: #f8fafc;
-            --content-bg: #ffffff;
-            --border-color: #e2e8f0;
-            --hint-bg: #eff6ff;
-            --hint-border: #dbeafe;
-            --hint-text: #1e40af;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--surface-bg);
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
+
+  <script src="toggletheme.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              DEFAULT: "#0f172a",
+              light: "#1e293b",
+              hover: "#334155",
+            },
+            primary: "#0f172a",
+            secondary: "#3b82f6",
+            surface: "#ffffff",
+            "background-light": "#f8fafc",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+          },
+          backgroundImage: {
+            'dot-pattern': 'radial-gradient(#cbd5e1 1px, transparent 1px)',
+            'dot-pattern-dark': 'radial-gradient(#334155 1px, transparent 1px)',
+          }
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .bg-dots {
+      background-size: 24px 24px;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
 </head>
 
-<body class="text-slate-900 min-h-screen flex flex-col">
-  <header class="border-b border-slate-200 bg-white sticky top-0 z-10">
-    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 bg-[var(--primary-blue)] rounded-md flex items-center justify-center">
-          <span class="material-symbols-outlined text-white text-xl">account_tree</span>
-        </div>
-        <h1 class="font-bold tracking-tight text-lg text-slate-800">LFA Builder</h1>
-      </div>
-      <div class="flex items-center gap-4">
-        <button
-          class="flex items-center justify-center w-10 h-10 rounded-full text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-colors"
-          title="Toggle Dark Mode">
-          <span class="material-symbols-outlined text-xl">dark_mode</span>
-        </button>
-      </div>
-    </div>
-  </header>
-  <main class="flex-1 flex flex-col items-center py-12 px-6">
-    <div class="w-full max-w-3xl">
-      <div class="mb-10">
-        <div class="flex justify-between items-center mb-4">
-          <div class="flex flex-col">
-            <span class="text-xs font-bold text-[var(--primary-blue)] uppercase tracking-wider">Step 4 of 6</span>
-            <h3 class="text-sm font-semibold text-slate-500">Stakeholder Mapping</h3>
+<body
+  class="bg-background-light dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-300">
+  <main
+    class="relative min-h-screen bg-background-light dark:bg-slate-950 bg-dots bg-dot-pattern dark:bg-dot-pattern-dark">
+
+    <header
+      class="border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 sticky top-0 z-10 backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90 transition-colors duration-300">
+      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div
+            class="w-8 h-8 bg-navy dark:bg-blue-600 rounded-md flex items-center justify-center shadow-sm transition-colors duration-300">
+            <span class="material-symbols-outlined text-white text-xl">account_tree</span>
           </div>
-          <div class="text-sm font-medium text-slate-400">
-            66% Complete
-          </div>
+          <h1 class="font-bold tracking-tight text-lg text-navy dark:text-white transition-colors duration-300">LFA
+            Builder</h1>
         </div>
-        <div class="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
-          <div class="h-full bg-[var(--primary-blue)] transition-all duration-500 ease-out" style="width: 66%;"></div>
+        <div class="flex items-center gap-4">
+          <button aria-label="Toggle dark mode" onclick="toggleTheme()"
+            class="w-10 h-10 flex items-center justify-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm rounded-full text-slate-600 dark:text-slate-400 hover:text-navy dark:hover:text-white transition-all">
+            <span class="material-symbols-outlined text-[20px] block dark:hidden">dark_mode</span>
+            <span class="material-symbols-outlined text-[20px] hidden dark:block">light_mode</span>
+          </button>
         </div>
       </div>
-      <div class="bg-[var(--content-bg)] p-10 rounded-xl border border-[var(--border-color)] shadow-sm">
-        <div class="space-y-8">
+    </header>
+
+    <main class="flex-1 flex flex-col items-center py-12 px-6">
+      <div class="w-full max-w-3xl">
+        <div class="mb-10">
+          <div class="flex justify-between items-center mb-4">
+            <div class="flex flex-col">
+              <span
+                class="text-xs font-bold text-blue-700 dark:text-blue-300 uppercase tracking-widest transition-colors duration-300">Step
+                4 of 6</span>
+              <h3 class="text-sm font-semibold text-slate-400 dark:text-slate-500 transition-colors duration-300">
+                Stakeholder Mapping</h3>
+            </div>
+            <div class="text-sm font-medium text-slate-400 dark:text-slate-500 transition-colors duration-300">
+              50% Complete
+            </div>
+          </div>
+          <div
+            class="h-2.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden transition-colors duration-300">
+            <div
+              class="h-full bg-blue-600 dark:bg-blue-400 border border-blue-100 dark:border-blue-800 rounded-full duration-500 ease-out"
+              style="width: 50%;"></div>
+          </div>
+        </div>
+
+        <div
+          class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-purple-500/10 dark:from-blue-500/5 dark:to-purple-500/5 rounded-bl-full">
+        </div>
+
+        <div class="space-y-8 relative z-10">
           <div>
-            <h2 class="text-3xl font-bold tracking-tight text-slate-900 mb-2">
-              Who are the key stakeholders?
-            </h2>
-            <p class="text-slate-500 text-lg">Select all groups that are directly involved in or affected by the
-              program.</p>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="material-symbols-outlined text-blue-600 dark:text-blue-400 text-4xl">groups</span>
+              <h2 class="text-4xl font-black tracking-tight text-navy dark:text-white transition-colors duration-300">
+                Who are the key stakeholders?
+              </h2>
+            </div>
+            <p class="text-slate-600 dark:text-slate-400 text-xl transition-colors duration-300 leading-relaxed">
+              Select all groups that are directly involved in or affected by the program.
+            </p>
           </div>
+
           <div id="stakeholderGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <label
-              class="relative flex items-center p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-[var(--primary-blue)] hover:bg-slate-50 transition-all group select-none">
+              class="relative flex items-center p-5 border-2 border-slate-200 dark:border-slate-800 rounded-2xl cursor-pointer hover:border-blue-500 dark:hover:border-blue-400 hover:bg-slate-50 dark:hover:bg-slate-900 transition-all group select-none shadow-sm hover:shadow-md">
               <input type="checkbox"
-                class="stakeholder-checkbox w-5 h-5 text-[var(--primary-blue)] border-slate-300 rounded focus:ring-[var(--primary-blue)] mr-4" />
+                class="stakeholder-checkbox w-5 h-5 text-blue-600 dark:text-blue-500 border-slate-300 dark:border-slate-600 rounded focus:ring-blue-600 dark:focus:ring-blue-500 mr-4 bg-white dark:bg-slate-950" />
               <div class="flex items-center gap-3">
                 <div
-                  class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-[var(--primary-blue)] group-hover:bg-blue-100 transition-colors">
+                  class="w-12 h-12 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-700 dark:text-blue-300 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/50 transition-colors">
                   <span class="material-symbols-outlined">school</span>
                 </div>
                 <div>
-                  <span class="block font-semibold text-slate-800">Teachers</span>
-                  <span class="text-sm text-slate-500">Educators &amp; Faculty</span>
+                  <span
+                    class="block font-bold text-slate-800 dark:text-slate-100 transition-colors duration-300">Teachers</span>
+                  <span class="text-sm text-slate-500 dark:text-slate-400 transition-colors duration-300">Educators
+                    &amp; Faculty</span>
                 </div>
               </div>
             </label>
             <label
-              class="relative flex items-center p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-[var(--primary-blue)] hover:bg-slate-50 transition-all group select-none">
+              class="relative flex items-center p-5 border-2 border-slate-200 dark:border-slate-800 rounded-2xl cursor-pointer hover:border-blue-500 dark:hover:border-blue-400 hover:bg-slate-50 dark:hover:bg-slate-900 transition-all group select-none shadow-sm hover:shadow-md">
               <input type="checkbox"
-                class="stakeholder-checkbox w-5 h-5 text-[var(--primary-blue)] border-slate-300 rounded focus:ring-[var(--primary-blue)] mr-4" />
+                class="stakeholder-checkbox w-5 h-5 text-blue-600 dark:text-blue-500 border-slate-300 dark:border-slate-600 rounded focus:ring-blue-600 dark:focus:ring-blue-500 mr-4 bg-white dark:bg-slate-950" />
               <div class="flex items-center gap-3">
                 <div
-                  class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-[var(--primary-blue)]">
+                  class="w-12 h-12 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-700 dark:text-blue-300 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/50 transition-colors">
                   <span class="material-symbols-outlined">supervisor_account</span>
                 </div>
                 <div>
-                  <span class="block font-semibold text-slate-800">School Leaders</span>
-                  <span class="text-sm text-slate-500">Principals &amp; Admins</span>
+                  <span class="block font-bold text-slate-800 dark:text-slate-100 transition-colors duration-300">School
+                    Leaders</span>
+                  <span class="text-sm text-slate-500 dark:text-slate-400 transition-colors duration-300">Principals
+                    &amp; Admins</span>
                 </div>
               </div>
             </label>
             <label
-              class="relative flex items-center p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-[var(--primary-blue)] hover:bg-slate-50 transition-all group select-none">
+              class="relative flex items-center p-5 border-2 border-slate-200 dark:border-slate-800 rounded-2xl cursor-pointer hover:border-blue-500 dark:hover:border-blue-400 hover:bg-slate-50 dark:hover:bg-slate-900 transition-all group select-none shadow-sm hover:shadow-md">
               <input
-                class="stakeholder-checkbox w-5 h-5 text-[var(--primary-blue)] border-slate-300 rounded focus:ring-[var(--primary-blue)] mr-4"
+                class="stakeholder-checkbox w-5 h-5 text-blue-600 dark:text-blue-500 border-slate-300 dark:border-slate-600 rounded focus:ring-blue-600 dark:focus:ring-blue-500 mr-4 bg-white dark:bg-slate-950"
                 type="checkbox" />
               <div class="flex items-center gap-3">
                 <div
-                  class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-[var(--primary-blue)] group-hover:bg-blue-100 transition-colors">
+                  class="w-12 h-12 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-700 dark:text-blue-300 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/50 transition-colors">
                   <span class="material-symbols-outlined">family_restroom</span>
                 </div>
                 <div>
-                  <span class="block font-semibold text-slate-800">Parents</span>
-                  <span class="text-sm text-slate-500">Families &amp; Guardians</span>
+                  <span
+                    class="block font-bold text-slate-800 dark:text-slate-100 transition-colors duration-300">Parents</span>
+                  <span class="text-sm text-slate-500 dark:text-slate-400 transition-colors duration-300">Families
+                    &amp; Guardians</span>
                 </div>
               </div>
             </label>
             <label
-              class="relative flex items-center p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-[var(--primary-blue)] hover:bg-slate-50 transition-all group select-none">
+              class="relative flex items-center p-5 border-2 border-slate-200 dark:border-slate-800 rounded-2xl cursor-pointer hover:border-blue-500 dark:hover:border-blue-400 hover:bg-slate-50 dark:hover:bg-slate-900 transition-all group select-none shadow-sm hover:shadow-md">
               <input
-                class="stakeholder-checkbox w-5 h-5 text-[var(--primary-blue)] border-slate-300 rounded focus:ring-[var(--primary-blue)] mr-4"
+                class="stakeholder-checkbox w-5 h-5 text-blue-600 dark:text-blue-500 border-slate-300 dark:border-slate-600 rounded focus:ring-blue-600 dark:focus:ring-blue-500 mr-4 bg-white dark:bg-slate-950"
                 type="checkbox" />
               <div class="flex items-center gap-3">
                 <div
-                  class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-[var(--primary-blue)] group-hover:bg-blue-100 transition-colors">
+                  class="w-12 h-12 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-700 dark:text-blue-300 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/50 transition-colors">
                   <span class="material-symbols-outlined">account_balance</span>
                 </div>
                 <div>
-                  <span class="block font-semibold text-slate-800">Officials</span>
-                  <span class="text-sm text-slate-500">Govt. &amp; District Officers</span>
+                  <span
+                    class="block font-bold text-slate-800 dark:text-slate-100 transition-colors duration-300">Officials</span>
+                  <span class="text-sm text-slate-500 dark:text-slate-400 transition-colors duration-300">Govt. &amp;
+                    District Officers</span>
                 </div>
               </div>
             </label>
             <button id="addStakeholderBtn"
-              class="flex items-center justify-center p-4 border border-dashed border-slate-300 rounded-lg text-slate-500 hover:text-[var(--primary-blue)] hover:border-[var(--primary-blue)] hover:bg-slate-50 transition-all h-full min-h-[88px] col-span-1 md:col-span-2 mt-2 group">
+              class="flex items-center justify-center p-5 border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-2xl text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500 dark:hover:border-blue-400 hover:bg-slate-50 dark:hover:bg-slate-900 transition-all h-full min-h-[96px] col-span-1 md:col-span-2 mt-2 group font-semibold">
               <span class="material-symbols-outlined mr-2 group-hover:scale-110 transition-transform">add_circle</span>
-              <span class="font-medium">Add Other Stakeholder</span>
+              <span>Add Other Stakeholder</span>
             </button>
           </div>
-          <div class="bg-[var(--hint-bg)] border border-[var(--hint-border)] p-6 rounded-lg flex gap-4">
+
+          <div
+            class="bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 p-6 rounded-xl flex gap-4 transition-all duration-300">
             <div class="flex-shrink-0">
-              <span class="material-symbols-outlined text-[var(--hint-text)]">lightbulb</span>
+              <span
+                class="material-symbols-outlined text-blue-700 dark:text-blue-300 transition-colors duration-300">lightbulb</span>
             </div>
             <div>
-              <h4 class="text-sm font-bold text-[var(--hint-text)] uppercase tracking-wider mb-2">Pro Tip: Influencers
-                vs. Participants</h4>
-              <p class="text-[var(--hint-text)] text-sm leading-relaxed opacity-90">
+              <h4
+                class="text-xs font-bold text-blue-700 dark:text-blue-300 uppercase tracking-widest mb-2 transition-colors duration-300">
+                Pro Tip: Influencers vs. Participants</h4>
+              <p
+                class="text-blue-700 dark:text-blue-300 text-sm leading-relaxed opacity-90 transition-colors duration-300">
                 Be sure to distinguish between <strong>Influencers</strong> (those who have decision-making power) and
                 <strong>Participants</strong> (those who are the direct beneficiaries). A balanced map includes both for
                 successful implementation.
@@ -161,67 +220,77 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="mt-8 flex justify-between items-center">
-        <a href="Step_3.html">
-          <button
-            class="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-slate-600 hover:bg-slate-100 transition-all">
-            <span class="material-symbols-outlined text-xl">arrow_back</span>
-            Previous Step
-          </button>
-        </a>
-        <div class="flex items-center gap-6">
+
+        <div class="mt-12 flex justify-between items-center gap-64">
+          <a href="Step_3.html">
+            <button
+              class="group flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
+              <span
+                class="material-symbols-outlined text-2xl group-hover:-translate-x-1 transition-transform">arrow_back</span>
+              <span>Previous Step</span>
+            </button>
+          </a>
           <a href="Step_5.html">
             <button
-              class="flex items-center gap-2 px-10 py-3 bg-[var(--primary-blue)] hover:bg-[var(--primary-hover)] text-white rounded-lg font-bold shadow-md shadow-blue-500/20 transition-all active:scale-[0.98]">
-              Next Step
-              <span class="material-symbols-outlined text-xl">arrow_forward</span>
+              class="group relative flex items-center gap-3 px-12 py-4 bg-gradient-to-r from-navy to-blue-900 dark:from-blue-600 dark:to-blue-500 text-white rounded-2xl shadow-2xl hover:shadow-blue-500/50 dark:hover:shadow-blue-500/50 transition-all duration-300 font-black text-lg overflow-hidden hover:scale-105 active:scale-95">
+              <span
+                class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span class="relative z-10">Next Step</span>
+              <span
+                class="material-symbols-outlined text-2xl relative z-10 group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </button>
           </a>
         </div>
       </div>
-    </div>
+    </main>
+
+    <footer
+      class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-8 transition-colors duration-300">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div
+          class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest transition-colors duration-300">
+          Version 1.0.1
+        </div>
+        <div class="text-xs text-slate-400 dark:text-slate-500 transition-colors duration-300">
+          © 2026 TechVerse Builders. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
   </main>
-  <footer class="border-t border-slate-200 bg-white py-8">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-6 text-sm font-medium text-slate-400">
-        <span>Version 1.0.1</span>
-      </div>
-      <div class="text-sm text-slate-400">
-        © 2026 TechVerse Builders. All Rights Reserved.
-      </div>
-    </div>
-  </footer>
+
   <script>
     const addBtn = document.getElementById("addStakeholderBtn");
     const grid = document.getElementById("stakeholderGrid");
     const STORAGE = "customStakeholders";
+
     function createStakeholderCard(name, subtitle) {
       const label = document.createElement("label");
       label.className =
-        "relative flex items-center p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-[var(--primary-blue)] hover:bg-slate-50 transition-all group select-none";
+        "relative flex items-center p-5 border-2 border-slate-200 dark:border-slate-800 rounded-2xl cursor-pointer hover:border-blue-500 dark:hover:border-blue-400 hover:bg-slate-50 dark:hover:bg-slate-900 transition-all group select-none shadow-sm hover:shadow-md";
       label.innerHTML = `
       <input
         type="checkbox"
-        class="stakeholder-checkbox w-5 h-5 text-[var(--primary-blue)] border-slate-300 rounded focus:ring-[var(--primary-blue)] mr-4"
+        class="stakeholder-checkbox w-5 h-5 text-blue-600 dark:text-blue-500 border-slate-300 dark:border-slate-600 rounded focus:ring-blue-600 dark:focus:ring-blue-500 mr-4 bg-white dark:bg-slate-950"
       />
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-[var(--primary-blue)] group-hover:bg-blue-100 transition-colors">
+        <div class="w-12 h-12 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-700 dark:text-blue-300 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/50 transition-colors">
           <span class="material-symbols-outlined">groups</span>
         </div>
         <div>
-          <span class="block font-semibold text-slate-800">${name}</span>
-          <span class="text-sm text-slate-500">${subtitle}</span>
+          <span class="block font-bold text-slate-800 dark:text-slate-100 transition-colors duration-300">${name}</span>
+          <span class="text-sm text-slate-500 dark:text-slate-400 transition-colors duration-300">${subtitle}</span>
         </div>
       </div>
     `;
       return label;
     }
+
     function saveStakeholder(name, subtitle) {
       const existing = JSON.parse(sessionStorage.getItem(STORAGE)) || [];
       existing.push({ name, subtitle });
       sessionStorage.setItem(STORAGE, JSON.stringify(existing));
     }
+
     function loadStakeholders() {
       const saved = JSON.parse(sessionStorage.getItem(STORAGE)) || [];
       saved.forEach(({ name, subtitle }) => {
@@ -229,6 +298,7 @@
         grid.insertBefore(card, addBtn);
       });
     }
+
     addBtn.addEventListener("click", () => {
       const name = prompt("Enter stakeholder name:");
       if (!name) return;
@@ -238,7 +308,7 @@
       grid.insertBefore(card, addBtn);
       saveStakeholder(name, subtitle);
     });
-    // Restore on page load
+
     loadStakeholders();
   </script>
   <script>
@@ -249,7 +319,7 @@
       document.querySelectorAll("label").forEach(label => {
         const checkbox = label.querySelector(".stakeholder-checkbox");
         if (checkbox && checkbox.checked) {
-          const name = label.querySelector(".font-semibold")?.innerText;
+          const name = label.querySelector(".font-bold")?.innerText;
           const subtitle = label.querySelector(".text-sm")?.innerText;
           if (name) selected.push({ name, subtitle });
         }
@@ -260,20 +330,17 @@
       sessionStorage.setItem(STORAGE_KEY, JSON.stringify(data));
     }
 
-    // Listen to all checkbox changes
     document.addEventListener("change", (e) => {
       if (e.target.classList.contains("stakeholder-checkbox")) {
         saveSelectedStakeholders();
       }
     });
-
-    // Restore checked state
     function restoreStakeholders() {
       const data = JSON.parse(sessionStorage.getItem(STORAGE_KEY)) || {};
       if (!data.step4) return;
 
       document.querySelectorAll("label").forEach(label => {
-        const name = label.querySelector(".font-semibold")?.innerText;
+        const name = label.querySelector(".font-bold")?.innerText;
         const checkbox = label.querySelector(".stakeholder-checkbox");
         if (!checkbox || !name) return;
 
