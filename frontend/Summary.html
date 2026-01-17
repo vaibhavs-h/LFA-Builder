@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>TECHVERSE LFA Summary</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f27f0d",
+            "slate-850": "#1e293b",
+            "paper": "#ffffff",
+          },
+          fontFamily: {
+            "sans": ["Inter", "sans-serif"]
+          },
+          boxShadow: {
+            "paper": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0,0,0,0.05)"
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    /*Changing the PDF Settings to be Printed*/
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 12mm;
+      }
+
+      body {
+        background: white;
+      }
+
+      .no-print {
+        display: none;
+      }
+
+      .page-sheet {
+        box-shadow: none;
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+        border: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-sans text-slate-800 min-h-screen flex flex-col items-center py-8 px-4 relative">
+  <button aria-label="Toggle Dark Mode"
+    class="fixed top-6 right-6 z-50 p-2 rounded-full bg-white text-slate-600 shadow-sm hover:bg-gray-50 hover:text-primary transition-all no-print border border-slate-200 flex items-center justify-center">
+    <span class="material-symbols-outlined text-[24px]">dark_mode</span>
+  </button>
+  <main
+    class="page-sheet bg-white w-full max-w-4xl shadow-sheet rounded-sm border border-gray-200 p-8 md:p-12 relative">
+    <header class="flex justify-between items-start border-b-2 border-gray-100 pb-6 mb-8">
+      <div class="flex items-start gap-4">
+        <div class="text-primary mt-1">
+          <svg class="size-8" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd"
+              d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+              fill="currentColor" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-lg font-bold text-slate-900 leading-tight">LFA Blueprint Builder</h1>
+          <p class="text-xs text-slate-500 font-medium tracking-widest uppercase mt-1">Professional Summary Review</p>
+        </div>
+      </div>
+      <div class="text-right">
+        <div
+          class="inline-flex items-center gap-2 bg-green-50 border border-green-200 text-green-700 px-3 py-1.5 rounded-full mb-2">
+          <span class="material-symbols-outlined text-[18px]"
+            style="font-variation-settings: 'FILL' 1">check_circle</span>
+          <span class="text-xs font-bold uppercase tracking-wide">Review Completed</span>
+        </div>
+      </div>
+    </header>
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold text-slate-900 mb-2">Urban Literacy Initiative 2026</h2>
+      <p class="text-slate-600 max-w-2xl text-base">
+        Strategic framework overview outlining problem definition, intervention logic, and success metrics.
+      </p>
+    </section>
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      <div
+        class="border border-slate-200 rounded-lg p-6 hover:shadow-sm transition-all bg-white flex flex-col h-full group">
+        <div class="flex justify-between items-start mb-4">
+          <div class="flex items-center gap-3">
+            <span class="text-sm font-bold text-slate-300 font-mono">01</span>
+            <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wide">Problem Statement</h3>
+          </div>
+          <button class="text-slate-400 hover:text-primary transition-colors p-1 hover:bg-slate-50 rounded">
+            <a href="Step_1.html">
+              <span class="material-symbols-outlined text-[18px]">edit</span>
+            </a>
+          </button>
+        </div>
+        <p id="summary-step1" class="text-sm text-slate-600 leading-relaxed">
+        </p>
+      </div>
+      <div
+        class="border border-slate-200 rounded-lg p-6 hover:shadow-sm transition-all bg-white flex flex-col h-full group">
+        <div class="flex justify-between items-start mb-4">
+          <div class="flex items-center gap-3">
+            <span class="text-sm font-bold text-slate-300 font-mono">02</span>
+            <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wide">Desired Student Change</h3>
+          </div>
+          <button class="text-slate-400 hover:text-primary transition-colors p-1 hover:bg-slate-50 rounded">
+            <a href="Step_2.html">
+              <span class="material-symbols-outlined text-[18px]">edit</span>
+            </a>
+          </button>
+        </div>
+        <p id="summary-step2" class="text-sm text-slate-600 leading-relaxed">
+        </p>
+      </div>
+      <div
+        class="border border-slate-200 rounded-lg p-6 hover:shadow-sm transition-all bg-white flex flex-col h-full group">
+        <div class="flex justify-between items-start mb-4">
+          <div class="flex items-center gap-3">
+            <span class="text-sm font-bold text-slate-300 font-mono">03</span>
+            <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wide">Proposed Intervention</h3>
+          </div>
+          <button class="text-slate-400 hover:text-primary transition-colors p-1 hover:bg-slate-50 rounded">
+            <a href="Step_3.html">
+              <span class="material-symbols-outlined text-[18px]">edit</span>
+            </a>
+          </button>
+        </div>
+        <p id="summary-step3" class="text-sm text-slate-600 leading-relaxed">
+        </p>
+      </div>
+      <div
+        class="border border-slate-200 rounded-lg p-6 hover:shadow-sm transition-all bg-white flex flex-col h-full group">
+        <div class="flex justify-between items-start mb-4">
+          <div class="flex items-center gap-3">
+            <span class="text-sm font-bold text-slate-300 font-mono">04</span>
+            <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wide">Primary Stakeholders</h3>
+          </div>
+          <button class="text-slate-400 hover:text-primary transition-colors p-1 hover:bg-slate-50 rounded">
+            <a href="Step_4.html">
+              <span class="material-symbols-outlined text-[18px]">edit</span>
+            </a>
+          </button>
+        </div>
+        <div id="summary-step4" class="flex flex-wrap gap-2"></div>
+      </div>
+      <div
+        class="border border-slate-200 rounded-lg p-6 hover:shadow-sm transition-all bg-white flex flex-col h-full group">
+        <div class="flex justify-between items-start mb-4">
+          <div class="flex items-center gap-3">
+            <span class="text-sm font-bold text-slate-300 font-mono">05</span>
+            <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wide">Practice Changes</h3>
+          </div>
+          <button class="text-slate-400 hover:text-primary transition-colors p-1 hover:bg-slate-50 rounded">
+            <a href="Step_5.html">
+              <span class="material-symbols-outlined text-[18px]">edit</span>
+            </a>
+          </button>
+        </div>
+        <p id="summary-step5" class="text-sm text-slate-600 leading-relaxed">
+        </p>
+      </div>
+      <div
+        class="border border-slate-200 rounded-lg p-6 hover:shadow-sm transition-all bg-white flex flex-col h-full group">
+        <div class="flex justify-between items-start mb-4">
+          <div class="flex items-center gap-3">
+            <span class="text-sm font-bold text-slate-300 font-mono">06</span>
+            <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wide">Key Performance Indicators</h3>
+          </div>
+          <button class="text-slate-400 hover:text-primary transition-colors p-1 hover:bg-slate-50 rounded">
+            <a href="Step_6.html">
+              <span class="material-symbols-outlined text-[18px]">edit</span>
+            </a>
+          </button>
+        </div>
+        <p id="summary-step6" class="text-sm text-slate-600 leading-relaxed">
+        </p>
+      </div>
+      <div
+        class="relative border border-slate-200 rounded-lg p-6 bg-gradient-to-br from-slate-50 to-white flex flex-col h-full md:col-span-2">
+        <div class="flex justify-between items-start mb-4">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-slate-400">smart_toy</span>
+            <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wide">
+              AI Generated Insights
+            </h3>
+          </div>
+          <button id="generate-ai-btn" class="group inline-flex items-center gap-2 px-4 py-2 rounded-md text-xs font-semibold
+             bg-slate-900 text-white shadow-sm
+             hover:bg-slate-800 hover:shadow-md
+             active:scale-[0.97] transition-all duration-200">
+            <span class="material-symbols-outlined text-sm group-hover:rotate-6 transition-transform">
+              auto_awesome
+            </span>
+            Generate
+          </button>
+        </div>
+        <div id="summary-ai"
+          class="text-sm text-slate-600 leading-relaxed bg-white border border-slate-200 rounded-md p-4 min-h-[120px]">
+          <span class="text-slate-400 italic">
+            Click “Generate” to Produce AI-Assisted Insights From Your Framework...
+          </span>
+        </div>
+      </div>
+    </section>
+    <div class="pt-8 border-t border-gray-100 no-print flex flex-col gap-6">
+      <div class="flex flex-col md:flex-row justify-end gap-3">
+        <button onclick="window.print()"
+          class="flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white rounded text-sm font-semibold hover:bg-slate-800 transition-colors shadow-sm justify-center">
+          <span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+          Export PDF
+        </button>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-2">
+        <p class="text-xs text-slate-400 font-medium">Version 1.0.1</p>
+        <p class="text-xs text-slate-400">© 2026 TechVerse Builders. All Rights Reserved.</p>
+      </div>
+    </div>
+  </main>
+  <script>
+    const data = JSON.parse(sessionStorage.getItem("lfaData")) || {};
+
+    // Text steps
+    document.getElementById("summary-step1").innerText = data.step1 || "—";
+    document.getElementById("summary-step2").innerText = data.step2 || "—";
+    document.getElementById("summary-step3").innerText = data.step3 || "—";
+    document.getElementById("summary-step5").innerText = data.step5 || "—";
+    document.getElementById("summary-step6").innerText = data.step6 || "—";
+
+    // Stakeholders (Step 4)
+    const container = document.getElementById("summary-step4");
+    if (data.step4 && data.step4.length) {
+      data.step4.forEach(s => {
+        const tag = document.createElement("span");
+        tag.className =
+          "inline-flex items-center px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200 shadow-sm";
+        tag.innerText = s.name;
+        container.appendChild(tag);
+      });
+    } else {
+      container.innerHTML = "<span class='text-sm text-slate-400'>No Stakeholders Selected</span>";
+    }
+  </script>
+</body>
+
+</html>

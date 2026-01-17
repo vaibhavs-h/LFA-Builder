@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>TECHVERSE LFA BUILDER - Student-Level Change</title>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <style type="text/tailwindcss">
+    :root {
+        --primary-blue: #2563eb;
+        --primary-hover: #1d4ed8;
+        --surface-bg: #f8fafc;
+        --content-bg: #ffffff;
+        --border-color: #e2e8f0;
+        --hint-bg: #eff6ff;
+        --hint-border: #dbeafe;
+        --hint-text: #1e40af;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--surface-bg);
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+    </style>
+</head>
+
+<body class="text-slate-900 min-h-screen flex flex-col">
+  <header class="border-b border-slate-200 bg-white sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 bg-[var(--primary-blue)] rounded-md flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-xl">
+            account_tree
+          </span>
+        </div>
+        <h1 class="font-bold tracking-tight text-lg text-slate-800">
+          LFA Builder
+        </h1>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button aria-label="Toggle Dark Mode"
+          class="w-10 h-10 flex items-center justify-center text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-colors">
+          <span class="material-symbols-outlined text-xl">dark_mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 flex flex-col items-center py-12 px-6">
+    <div class="w-full max-w-3xl">
+      <div class="mb-10">
+        <div class="flex justify-between items-center mb-4">
+          <div class="flex flex-col">
+            <span class="text-xs font-bold text-[var(--primary-blue)] uppercase tracking-wider">
+              Step 2 of 6
+            </span>
+            <h3 class="text-sm font-semibold text-slate-500">
+              Student-Level Change
+            </h3>
+          </div>
+
+          <div class="text-sm font-medium text-slate-400">
+            33% Complete
+          </div>
+        </div>
+
+        <div class="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
+          <div class="h-full bg-[var(--primary-blue)] transition-all duration-500 ease-out" style="width: 33.33%;">
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[var(--content-bg)] p-10 rounded-xl border border-[var(--border-color)] shadow-sm">
+        <div class="space-y-6">
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight text-slate-900 mb-2">
+              What specific change do you want to see for students?
+            </h2>
+            <p class="text-slate-500 text-lg">
+              Describe the specific outcomes or behavioral changes you aim to
+              achieve for the target student group.
+            </p>
+          </div>
+          <div class="relative">
+            <textarea
+              class="w-full min-h-[200px] bg-white border border-slate-300 focus:border-[var(--primary-blue)] focus:ring-4 focus:ring-blue-500/10 rounded-lg p-5 text-lg placeholder:text-slate-400 transition-all resize-none leading-relaxed"
+              id="intervention-input" placeholder="Describe the activities or model..."></textarea>
+          </div>
+
+          <div class="bg-[var(--hint-bg)] border border-[var(--hint-border)] p-6 rounded-lg flex gap-4">
+            <div class="flex-shrink-0">
+              <span class="material-symbols-outlined text-[var(--hint-text)]">
+                lightbulb
+              </span>
+            </div>
+
+            <div>
+              <h4 class="text-sm font-bold text-[var(--hint-text)] uppercase tracking-wider mb-2">
+                Pro Tip: Use SMART Goals
+              </h4>
+
+              <p class="text-[var(--hint-text)] text-sm leading-relaxed opacity-90">
+                Aim for Specific, Measurable, Achievable, Relevant, and
+                Time-bound goals. Instead of "Improve reading," use:
+                <br />
+                <span class="italic font-medium">
+                  "85% of students will demonstrate proficiency in grade-level
+                  reading comprehension by the end of the academic year."
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 flex justify-between items-center">
+        <a href="Step_1.html">
+          <button
+            class="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-slate-600 hover:bg-slate-100 transition-all">
+            <span class="material-symbols-outlined text-xl">
+              arrow_back
+            </span>
+            Previous Step
+          </button>
+        </a>
+        <a href="Step_3.html">
+          <button
+            class="flex items-center gap-2 px-10 py-3 bg-[var(--primary-blue)] hover:bg-[var(--primary-hover)] text-white rounded-lg font-bold shadow-md shadow-blue-500/20 transition-all active:scale-[0.98]">
+            Next Step
+            <span class="material-symbols-outlined text-xl">
+              arrow_forward
+            </span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-8">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-sm font-medium text-slate-400">
+        Version 1.0.1
+      </div>
+      <div class="text-sm text-slate-400">
+        © 2026 TechVerse Builders. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+  <script>
+    const STEP_KEY = "step2"; // change to step2, step3, step5, step6
+    const STORAGE_KEY = "lfaData";
+    const textarea = document.getElementById("intervention-input");
+
+    // Load existing data
+    const data = JSON.parse(sessionStorage.getItem(STORAGE_KEY)) || {};
+    if (data[STEP_KEY]) {
+      textarea.value = data[STEP_KEY];
+    }
+
+    // Save on typing
+    textarea.addEventListener("input", () => {
+      const updated = JSON.parse(sessionStorage.getItem(STORAGE_KEY)) || {};
+      updated[STEP_KEY] = textarea.value;
+      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+    });
+  </script>
+
+</body>
+
+</html>

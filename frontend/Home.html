@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>TECHVERSE LFA BUILDER</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              DEFAULT: "#0f172a",
+              light: "#1e293b",
+              hover: "#334155",
+            },
+            primary: "#0f172a",
+            secondary: "#3b82f6",
+            surface: "#ffffff",
+            "background-light": "#f8fafc",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+          },
+          backgroundImage: {
+            'dot-pattern': 'radial-gradient(#cbd5e1 1px, transparent 1px)',
+            'dot-pattern-dark': 'radial-gradient(#334155 1px, transparent 1px)',
+          }
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .bg-dots {
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-300">
+  <main
+    class="relative min-h-screen bg-background-light dark:bg-slate-950 bg-dots bg-dot-pattern dark:bg-dot-pattern-dark">
+    <div class="fixed top-6 right-8 z-30">
+      <button
+        class="w-10 h-10 flex items-center justify-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm rounded-full text-slate-600 dark:text-slate-400 hover:text-navy dark:hover:text-white transition-all"
+        onclick="document.documentElement.classList.toggle('dark')">
+        <span class="material-symbols-outlined text-[20px] block dark:hidden">dark_mode</span>
+        <span class="material-symbols-outlined text-[20px] hidden dark:block">light_mode</span>
+      </button>
+    </div>
+    <div class="max-w-6xl mx-auto px-8 py-24 flex flex-col">
+      <div class="mb-24">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-navy dark:text-white leading-[1.1]">
+          TECHVERSE<br />
+          <span class="text-slate-500 dark:text-slate-400">LFA BUILDER</span>
+        </h1>
+        <p class="text-xl text-slate-600 dark:text-slate-300 mb-12 max-w-2xl leading-relaxed">
+          A unified platform to design your education programs. Structure your Logical Framework Approach in minutes
+          with professional templates and AI-assisted tools.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="Step_1.html">
+            <button
+              class="px-8 py-4 bg-navy hover:bg-navy-light dark:bg-blue-600 dark:hover:bg-blue-500 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3 font-semibold text-base">
+              <span class="material-symbols-outlined text-[22px]">add</span>
+              Start New LFA
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="mb-24">
+        <div class="flex items-center gap-4 mb-10">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest">How It Works</h2>
+          <div class="h-px flex-1 bg-slate-200 dark:bg-slate-800"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-slate-100 dark:bg-slate-800 -z-10"></div>
+          <div
+            class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-[0_2px_15px_rgba(0,0,0,0.03)] border border-slate-100 dark:border-slate-800 hover:-translate-y-1 transition-all duration-300">
+            <div
+              class="w-12 h-12 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold mb-6 border border-blue-100 dark:border-blue-800 shadow-sm">
+              1</div>
+            <h3 class="font-bold text-navy dark:text-white mb-3 text-lg">Define Problem</h3>
+            <p class="text-slate-500 dark:text-slate-400 leading-relaxed">Identify core issues and analyze the root
+              causes using the problem tree tool.</p>
+          </div>
+          <div
+            class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-[0_2px_15px_rgba(0,0,0,0.03)] border border-slate-100 dark:border-slate-800 hover:-translate-y-1 transition-all duration-300">
+            <div
+              class="w-12 h-12 rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 flex items-center justify-center font-bold mb-6 border border-slate-200 dark:border-slate-700 shadow-sm">
+              2</div>
+            <h3 class="font-bold text-navy dark:text-white mb-3 text-lg">Define Change</h3>
+            <p class="text-slate-500 dark:text-slate-400 leading-relaxed">Map out stakeholders, objectives, and the
+              desired change hierarchy.</p>
+          </div>
+          <div
+            class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-[0_2px_15px_rgba(0,0,0,0.03)] border border-slate-100 dark:border-slate-800 hover:-translate-y-1 transition-all duration-300">
+            <div
+              class="w-12 h-12 rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 flex items-center justify-center font-bold mb-6 border border-slate-200 dark:border-slate-700 shadow-sm">
+              3</div>
+            <h3 class="font-bold text-navy dark:text-white mb-3 text-lg">Review Summary</h3>
+            <p class="text-slate-500 dark:text-slate-400 leading-relaxed">Generate your framework matrix and export
+              directly to PDF or Excel.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="flex flex-col gap-5 p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-all">
+          <div class="w-12 h-12 rounded-xl bg-navy/5 dark:bg-white/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-navy dark:text-white text-2xl">architecture</span>
+          </div>
+          <div>
+            <h3 class="font-bold text-navy dark:text-white mb-2 text-lg">Structured Design</h3>
+            <p class="text-slate-500 dark:text-slate-400 leading-relaxed">Built on industry-standard Logical Framework
+              Approach for robust planning.</p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-5 p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-all">
+          <div class="w-12 h-12 rounded-xl bg-pink-500/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-pink-600 text-2xl">groups</span>
+          </div>
+          <div>
+            <h3 class="font-bold text-navy dark:text-white mb-2 text-lg">Stakeholder-Centric</h3>
+            <p class="text-slate-500 dark:text-slate-400 leading-relaxed">Map teachers, students, and administrators
+              directly to your intervention goals.</p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-5 p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-all">
+          <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-green-600 text-2xl">picture_as_pdf</span>
+          </div>
+          <div>
+            <h3 class="font-bold text-navy dark:text-white mb-2 text-lg">Ready to Deploy</h3>
+            <p class="text-slate-500 dark:text-slate-400 leading-relaxed">Export your LFA to PDF for
+              immediate sharing.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="mt-32 pt-12 border-t border-slate-200 dark:border-slate-800">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 pb-12">
+          <div class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
+            Version 1.0.1
+          </div>
+          <div class="text-xs text-slate-400 dark:text-slate-500 text-center md:text-right font-medium">
+            © 2026 TechVerse Builders. All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+</body>
+
+</html>
