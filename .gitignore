@@ -1,0 +1,11 @@
+# Backend
+backend/node_modules/
+backend/.env
+
+# OS / Editor junk
+.DS_Store
+.vscode/
+.idea/
+
+# Logs
+npm-debug.log*

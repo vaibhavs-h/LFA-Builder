@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>TECHVERSE LFA BUILDER - Core Question</title>
+  <title>TECHVERSE LFA BUILDER - Student-Level Change</title>
 
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
@@ -15,7 +15,7 @@
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-  <script src="toggletheme.js"></script>
+  <script src="../js/toggletheme.js"></script>
 
   <script>
     tailwind.config = {
@@ -96,23 +96,23 @@
             <div class="flex flex-col">
               <span
                 class="text-xs font-bold text-blue-700 dark:text-blue-300 uppercase tracking-widest transition-colors duration-300">
-                Step 1 of 6
+                Step 2 of 6
               </span>
               <h3 class="text-sm font-semibold text-slate-400 dark:text-slate-500 transition-colors duration-300">
-                Define Core Problem
+                Student-Level Change
               </h3>
             </div>
             <div class="text-sm font-medium text-slate-400 dark:text-slate-500 transition-colors duration-300">
-              0% Complete
+              17% Complete
             </div>
           </div>
 
           <div
             class="h-2.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden transition-colors duration-300">
-            <div
-              class="h-full bg-blue-600 dark:bg-blue-400 border border-blue-100 dark:border-blue-800 rounded-full duration-500 ease-out"
-              style="width: 0%;">
+            <div class="h-full bg-blue-600 dark:bg-blue-400 border border-blue-100 dark:border-blue-800 rounded-full"
+              style="width: 16.66%;">
             </div>
+
           </div>
         </div>
 
@@ -123,24 +123,26 @@
         <div class="space-y-8 relative z-10">
           <div>
             <div class="flex items-center gap-3 mb-4">
-              <span class="material-symbols-outlined text-blue-600 dark:text-blue-400 text-4xl">help_center</span>
+              <span class="material-symbols-outlined text-blue-600 dark:text-blue-400 text-4xl">school</span>
               <h2 class="text-4xl font-black tracking-tight text-navy dark:text-white transition-colors duration-300">
-                What system problem are you solving?
+                What specific change do you want to see for students?
               </h2>
             </div>
             <p class="text-slate-600 dark:text-slate-400 text-xl transition-colors duration-300 leading-relaxed">
-              Describe the central challenge that your program intends to address.
+              Describe the specific outcomes or behavioral changes you aim to achieve for the target student group.
             </p>
           </div>
 
           <div class="relative group">
             <textarea
               class="w-full min-h-[240px] bg-white dark:bg-slate-950 border-2 border-slate-200 dark:border-slate-800 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-4 focus:ring-blue-500/20 dark:focus:ring-blue-500/30 rounded-2xl p-6 text-lg text-slate-800 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 transition-all duration-300 resize-none leading-relaxed shadow-inner hover:shadow-md font-medium"
-              id="intervention-input" placeholder="Start typing your problem statement here..."></textarea>
+              id="intervention-input"
+              placeholder="Describe the specific student outcomes you aim to achieve..."></textarea>
             <div class="absolute bottom-4 right-4 text-xs text-slate-400 dark:text-slate-500 font-semibold">
               <span id="char-count">0</span> characters
             </div>
           </div>
+
           <div
             class="bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 p-6 rounded-xl flex gap-4 transition-all duration-300">
             <div class="flex-shrink-0">
@@ -152,23 +154,25 @@
             <div>
               <h4
                 class="text-xs font-bold text-blue-700 dark:text-blue-300 uppercase tracking-widest mb-2 transition-colors duration-300">
-                Pro Tip
+                Pro Tip: Use SMART Goals
               </h4>
               <p
                 class="text-blue-700 dark:text-blue-300 text-sm leading-relaxed opacity-90 transition-colors duration-300">
-                Try to be specific. Instead of "Low quality education", use:
+                Aim for Specific, Measurable, Achievable, Relevant, and Time-bound goals. Instead of "Improve reading,"
+                use:
                 <br />
                 <span class="italic font-medium">
-                  "Teachers lack structured lesson plans and ongoing pedagogical support,
-                  resulting in inconsistent classroom delivery across the district."
+                  "85% of students will demonstrate proficiency in grade-level reading comprehension by the end of the
+                  academic year."
                 </span>
               </p>
             </div>
           </div>
         </div>
       </div>
+
       <div class="mt-12 flex justify-between items-center gap-64">
-        <a href="Home.html">
+        <a href="Step_1.html">
           <button
             class="group flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
             <span
@@ -176,7 +180,7 @@
             <span>Previous Step</span>
           </button>
         </a>
-        <a href="Step_2.html">
+        <a href="Step_3.html">
           <button
             class="group relative flex items-center gap-3 px-12 py-4 bg-gradient-to-r from-navy to-blue-900 dark:from-blue-600 dark:to-blue-500 text-white rounded-2xl shadow-2xl hover:shadow-blue-500/50 dark:hover:shadow-blue-500/50 transition-all duration-300 font-black text-lg overflow-hidden hover:scale-105 active:scale-95">
             <span
@@ -186,7 +190,6 @@
               class="material-symbols-outlined text-2xl relative z-10 group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </button>
         </a>
-      </div>
       </div>
     </main>
 
@@ -205,18 +208,21 @@
   </main>
 
   <script>
-    const STEP_KEY = "step1";
+    const STEP_KEY = "step2";
     const STORAGE_KEY = "lfaData";
     const textarea = document.getElementById("intervention-input");
+    const charCount = document.getElementById("char-count");
 
     // Load existing data
     const data = JSON.parse(sessionStorage.getItem(STORAGE_KEY)) || {};
     if (data[STEP_KEY]) {
       textarea.value = data[STEP_KEY];
+      charCount.textContent = textarea.value.length;
     }
 
-    // Save on typing
+    // Update character count and save on typing
     textarea.addEventListener("input", () => {
+      charCount.textContent = textarea.value.length;
       const updated = JSON.parse(sessionStorage.getItem(STORAGE_KEY)) || {};
       updated[STEP_KEY] = textarea.value;
       sessionStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
