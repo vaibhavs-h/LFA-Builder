@@ -18,26 +18,50 @@ app.post("/generate-insights", async (req, res) => {
     const { lfaData } = req.body;
 
     const prompt = `
-You are an education systems expert.
-Based on the following Logical Framework data, generate concise strategic insights:
+You are an expert in education system reform working with government schools and education departments in India.
 
-Problem Statement:
+You are reviewing a Logical Framework Approach (LFA) created by an education organization.
+
+Context:
+- The work operates within public school systems
+- Change must occur through teachers, school leaders, and system actors
+- Constraints include policy alignment, capacity, and scale
+
+Logical Framework Details:
+
+1. Core Problem:
 ${lfaData.step1}
 
-Desired Change:
+2. Desired Change:
 ${lfaData.step2}
 
-Intervention:
+3. Key Interventions:
 ${lfaData.step3}
 
-Stakeholders:
+4. Key Stakeholders:
 ${(lfaData.step4 || []).map(s => s.name).join(", ")}
 
-Practice Changes:
+5. Practice Changes Expected:
 ${lfaData.step5}
 
-KPIs:
+6. Success Indicators (KPIs):
 ${lfaData.step6}
+
+Review this LFA and provide insights under the following headings:
+
+### Strengths
+- Identify 2–3 strong aspects of the design
+
+### Gaps or Risks
+- Identify misalignments, missing actors, or feasibility concerns
+
+### System-Level Suggestions
+- Suggest 2–3 improvements to strengthen impact at scale
+
+Guidelines:
+- Be specific to the content provided
+- Avoid generic or motivational language
+- Write clearly for practitioners and system leaders
 `;
 
     const response = await ai.models.generateContent({

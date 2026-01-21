@@ -204,19 +204,22 @@
     </footer>
   </main>
 
-  <script>
+   <script>
     const STEP_KEY = "step1";
     const STORAGE_KEY = "lfaData";
     const textarea = document.getElementById("intervention-input");
+    const charCount = document.getElementById("char-count");
 
     // Load existing data
     const data = JSON.parse(sessionStorage.getItem(STORAGE_KEY)) || {};
     if (data[STEP_KEY]) {
       textarea.value = data[STEP_KEY];
+      charCount.textContent = textarea.value.length;
     }
 
-    // Save on typing
+    // Update character count and save on typing
     textarea.addEventListener("input", () => {
+      charCount.textContent = textarea.value.length;
       const updated = JSON.parse(sessionStorage.getItem(STORAGE_KEY)) || {};
       updated[STEP_KEY] = textarea.value;
       sessionStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
