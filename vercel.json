@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/generate-insights",
+      "destination": "/api/server.js"
+    },
+    {
+      "source": "/",
+      "destination": "/frontend/pages/Home.html"
+    },
+    {
+      "source": "/js/(.*)",
+      "destination": "/frontend/js/$1"
+    },
+    {
+      "source": "/pages/(.*)",
+      "destination": "/frontend/pages/$1"
+    }
+  ]
+}

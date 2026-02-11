@@ -335,30 +335,30 @@
     }
   </script>
 
-<!-- AI Generation Script -->
- <script>
-  const aiBtn = document.getElementById("generate-ai-btn");
-  const aiBox = document.getElementById("summary-ai");
+  <!-- AI Generation Script -->
+  <script>
+    const aiBtn = document.getElementById("generate-ai-btn");
+    const aiBox = document.getElementById("summary-ai");
 
-  aiBtn.addEventListener("click", async () => {
-    aiBox.innerHTML = "Generating insights…";
+    aiBtn.addEventListener("click", async () => {
+      aiBox.innerHTML = "Generating insights…";
 
-    const lfaData = JSON.parse(sessionStorage.getItem("lfaData")) || {};
+      const lfaData = JSON.parse(sessionStorage.getItem("lfaData")) || {};
 
-    try {
-      const res = await fetch("http://localhost:3000/generate-insights", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ lfaData }),
-      });
+      try {
+        const res = await fetch("/api/generate-insights", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ lfaData }),
+        });
 
-      const data = await res.json();
-      aiBox.innerText = data.text;
-    } catch (err) {
-      aiBox.innerText = "Failed to generate insights.";
-    }
-  });
-</script>
+        const data = await res.json();
+        aiBox.innerText = data.text;
+      } catch (err) {
+        aiBox.innerText = "Failed to generate insights.";
+      }
+    });
+  </script>
 
 </body>
 
