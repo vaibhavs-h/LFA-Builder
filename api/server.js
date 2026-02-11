@@ -13,7 +13,7 @@ const ai = new GoogleGenAI({
   apiKey: process.env.GOOGLE_API_KEY,
 });
 
-app.post("/generate-insights", async (req, res) => {
+app.post("/api/generate-insights", async (req, res) => {
   try {
     const { lfaData } = req.body;
 
