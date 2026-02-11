@@ -335,27 +335,28 @@
     }
   </script>
 
-  <!-- AI Generation Script -->
   <script>
     const aiBtn = document.getElementById("generate-ai-btn");
     const aiBox = document.getElementById("summary-ai");
 
     aiBtn.addEventListener("click", async () => {
       aiBox.innerHTML = "Generating insights…";
-
       const lfaData = JSON.parse(sessionStorage.getItem("lfaData")) || {};
-
       try {
         const res = await fetch("/api/generate-insights", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ lfaData }),
         });
-
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          aiBox.innerText = `Error: ${err.details || err.error || 'Failed to load.'}`;
+          return;
+        }
         const data = await res.json();
         aiBox.innerText = data.text;
       } catch (err) {
-        aiBox.innerText = "Failed to generate insights.";
+        aiBox.innerText = "Error: Network failure.";
       }
     });
   </script>

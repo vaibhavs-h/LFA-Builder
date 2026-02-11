@@ -1,9 +1,10 @@
 {
   "name": "lfa-builder-root",
   "version": "1.0.0",
+  "type": "module",
   "main": "api/server.js",
   "dependencies": {
-    "@google/genai": "^1.37.0",
+    "@google/generative-ai": "^0.21.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1"

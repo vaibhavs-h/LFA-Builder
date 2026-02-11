@@ -1,6 +1,10 @@
-# Backend
-backend/node_modules/
-backend/.env
+# Dependencies
+node_modules/
+.vercel
+
+# Environment
+.env
+.env*.local
 
 # OS / Editor junk
 .DS_Store
@@ -9,3 +13,8 @@ backend/.env
 
 # Logs
 npm-debug.log*
+
+# Media (too large for git)
+*.mov
+*.mp4
+*.avi
