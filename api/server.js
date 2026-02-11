@@ -30,22 +30,22 @@ Context:
 Logical Framework Details:
 
 1. Core Problem:
-\${lfaData.step1}
+${lfaData.step1}
 
 2. Desired Change:
-\${lfaData.step2}
+${lfaData.step2}
 
 3. Key Interventions:
-\${lfaData.step3}
+${lfaData.step3}
 
 4. Key Stakeholders:
-\${(lfaData.step4 || []).map(s => s.name).join(", ")}
+${(lfaData.step4 || []).map(s => s.name).join(", ")}
 
 5. Practice Changes Expected:
-\${lfaData.step5}
+${lfaData.step5}
 
 6. Success Indicators (KPIs):
-\${lfaData.step6}
+${lfaData.step6}
 
 Review this LFA and provide insights under the following headings:
 
