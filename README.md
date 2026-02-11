@@ -46,11 +46,7 @@ The "Generate Insights" feature uses the Google Gemini API to analyze your LFA a
 
 ---
 
-## 📝 Contact
-
-**Vaibhav**
-- GitHub: [@vaibhavs-h](https://github.com/vaibhavs-h)
+⭐ **If you found this project helpful, please consider giving it a star on GitHub!** ⭐
 
 ---
-
-⭐ **If you found this project helpful, please consider giving it a star on GitHub!** ⭐
+Built with ❤️ by [Vaibhav](https://github.com/vaibhavs-h)
