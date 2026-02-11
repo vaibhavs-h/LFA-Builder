@@ -2,19 +2,23 @@
   "version": 2,
   "rewrites": [
     {
-      "source": "/api/generate-insights",
+      "source": "/api/(.*)",
       "destination": "/api/server.js"
-    },
-    {
-      "source": "/",
-      "destination": "/frontend/pages/Home.html"
     },
     {
       "source": "/js/(.*)",
       "destination": "/frontend/js/$1"
     },
     {
-      "source": "/pages/(.*)",
+      "source": "/assets/(.*)",
+      "destination": "/assets/$1"
+    },
+    {
+      "source": "/",
+      "destination": "/frontend/pages/Home.html"
+    },
+    {
+      "source": "/(.*.html)",
       "destination": "/frontend/pages/$1"
     }
   ]
